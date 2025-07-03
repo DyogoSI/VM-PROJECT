@@ -1,0 +1,19 @@
+body{
+    background-color: black;
+    
+    font-family: Arial, Helvetica, sans-serif;
+    color:white;
+    line-height:1.6;
+
+}
+
+header{
+    background-color:grey;
+    border-radius:12px;
+
+}
+
+section h2{
+    color:tomato
+}
+
