@@ -12,6 +12,10 @@ body {
   padding: 20px;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 header {
   background-color: #005f73;
   color: white;
@@ -30,12 +34,47 @@ header p {
   margin-top: 10px;
 }
 
+.imagem-capa {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+nav{
+  margin-top: 20px;
+
+}
+
+.menu{
+  display: flex; 
+  justify-content: center;
+  gap: 20px;
+  list-style:none;
+  flex-wrap: wrap;
+
+}
+
+.menu a{
+  text-decoration:none; /*remove os sublinhado dos links*/
+  color: #fff;/*define a cor do texto*/
+  background-color: #0077b6;/*define a cor de fundo dos botões*/
+  padding: 10px 15px;/*adiciona espaçamento interno e deixa o botão mais maior*/
+  border-radius:8px;/*arredonda os cantos do botão */
+  transition:background-color 0.3s; /*cria uma transição de cor de 0.3*/
+}
+
+.menu a:hover{ /*adiciona uma nova cor ao botão ao passar o mouse encima*/
+  background-color: #023e8a;
+}
+
 main {
   max-width: 800px;
   margin: 0 auto;
 }
 
-section {
+section {/*edita todo o section*/
   background-color: #fff;
   padding: 20px;
   margin-bottom: 20px;
@@ -43,7 +82,7 @@ section {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-section h2 {
+section h2 {/*edita todos os elementos h2 que está no no section*/
   color: #0077b6;
   margin-bottom: 10px;
 }
@@ -53,19 +92,11 @@ ul {
   padding-left: 20px;
 }
 
-footer {
-  text-align: center;
-  margin-top: 40px;
-  color: #555;
-  font-size: 0.9rem;
-}
-
-.imagem-capa {
-  width: 100%;
-  max-height: 300px;
-  object-fit: cover;
-  border-top-left-radius: 12px;
-  border-top-right-radius: 12px;
+footer {/*edita o footer*/
+  text-align: center;/*alinha o texto ao centro*/
+  margin-top: 40px;/*adiciona espaço acima do footer afastando dos elemntos que vem antes ex: o ultimo section*/
+  color: #555;/*define a cor do texto do footer*/
+  font-size: 0.9rem;/*diminui o tamanho da fonte*/
 }
 
 @media (max-width: 768px) {
@@ -84,4 +115,176 @@ footer {
   body {
     padding: 10px;
   }
+}
+
+section button{
+  background-color: #0077b6;/*cor de fundo dos botões*/
+  color: white;/*define a cor do texto */
+  border:none;/**/
+  border-radius:8px;/*deixa as bordas do botões mais arredondadas */
+  padding:10px 20px;/* aumenta o espaçamento interno dos botões*/
+  font-size: 1rem;/**/
+  cursor:pointer;/*muda o cursor ao passar ele encima do botão */
+  transition:background-color 0.3s; /*cria uma transição de 0.3 segundos*/
+  
+}
+
+section button:hover{
+  background-color:#023e8a;
+}
+
+#contato-formulario{
+  background-color: #ffffff;
+  padding: 20px;
+  margin-top: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+#contato-formulario form{
+  display: flex;
+  flex-direction: column;
+
+}
+
+#contato-formulario label{
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+#contato-formulario input,
+#contato-formulario textarea{
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size:1rem;
+}
+
+#contato-formulario button{
+  margin-top: 15px;
+  background-color: #0077b6;
+  color: #fff;
+  border:none;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor:pointer;
+  transition: background-color 0.3s;
+}
+
+#contato-formulario button:hover{
+  background-color: #023e8a;
+}
+
+#beneficios{
+  margin-top:40px;
+  text-align: center;
+}
+
+.cards-container{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap:wrap;
+  margin-top: 20px;
+
+}
+
+.card{
+  background-color:#ffffff;
+  padding:20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover{
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card i {
+  font-size: 2rem;
+  color: #0077b6;
+  margin-bottom: 10px;
+}
+
+.card h3{
+  margin-bottom: 10px;
+  color: #023e8a;
+}
+
+#faq{
+  margin-top: 40px;
+}
+
+.faq-item{
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.faq-question{
+  width: 100%;
+  padding: 15px;
+  background-color: #0077b6;
+  color: #fff;
+  text-align: left;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+}
+
+.faq-question:hover{
+  background-color: #023e8a;
+
+}
+
+.faq-answer{
+  display: none;
+  padding: 15px;
+  background-color: #f9f9f9;
+  color: #333;
+
+}
+
+#mitos-vm{
+  background-color: #ffffff;
+  padding: 20px;
+  margin-top: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.lista-mitos button{
+ display: block;
+ width: 100%;
+ background-color: #0077b6;
+ color: white;
+border: none;
+padding: 10px;
+margin-bottom: 10px;
+border-radius: 6px;
+cursor: pointer;
+transition: background-color 0.3s;
+font-size: 1rem;
+text-align: left;
+}
+
+.lista-mitos button:hover{
+  background-color: #023e8a;
+}
+
+.lista-mitos .resposta{
+  background-color: #e0f0ff;
+  padding: 10px;
+  border-left: 4px solid #0077b6;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  font-size: 0.95rem;
 }

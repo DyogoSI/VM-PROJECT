@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hackeando a Realidade: O Poder das Máquinas Virtuais</title>
+    
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
       <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,16 +14,25 @@
         <img src="img/capa.png" alt="imagem capa" class="imagem-capa">
         <h1>Hackeando a Realidade: O Poder das Máquinas Virtuais</h1>
         <p> Descubra o que são,como funcionam e porque são tão úteis.</p>
+
+        <nav>
+            <ul class="menu">
+                <li><a href="#oque">O que é</a></li>
+                <li><a href="#vantagens">Vantagens</a></li>
+                <li><a href="#desvantagens">Desvantagens</a></li>
+                <li><a href="#softwares">Softwares</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
-        <section>
+        <section id="oque">
             <h2>O que é uma maquina virtual?</h2>
             <p>Uma maquina virtual (VM) é um software que simula um computador fisico.Ela permite executar sistemas operacionais e aplicativos de forma isolada,como se fosse uma maquian real. </p>
 
         </section>
 
-        <section>
+        <section id="vantagens">
             <h2>Vantagens</h2>
             <ul>
                 <li>Executar varios sistemas operacionais no mesmo computador.</li>
@@ -29,7 +41,7 @@
             </ul>
         </section>
 
-        <section>
+        <section id="desvantagens">
             <h2>Desvantagens</h2>
             <ul>
                 <li>Consome bastante memoria e processamento.</li>
@@ -37,7 +49,7 @@
             </ul>
         </section>
 
-        <section>
+        <section id="softwares">
             <h2>Exemplos de softwares</h2>
             <ul>
                 <li>VMware Workstation</li>
@@ -47,10 +59,109 @@
             </ul>
         </section>
 
+        <section id="beneficios">
+              <h2>Beneficios das maquinas Virtuais</h2>
+
+              <div class="cards-container">
+                    <div class="card">
+                         <i class="fas fa-lock"></i>
+                         <h3>Segurança</h3>
+                         <p>Ambientes isolados garantem testes seguros sem afetar seu sistema real</p>
+                    </div>
+              
+                    <div class="card">
+                         <i class="fas fa-sync-alt"></i>
+                         <h3>Flexibilidade</h3>
+                         <p>Você pode restaurar snapshots e alternar sistemas com facilidade</p>
+                    </div>
+
+                    <div class="card">
+                         <i class="fas fa-server"></i>
+                         <h3>Infraestrutura</h3>
+                         <p>Ideal para simular servidores e redes completas e um só PC.</p>
+                    </div>
+              </div>
+        </section>
+
+        <section id="mitos-vm">
+            <h2>Mitos sobre Máquinas Vituais</h2>
+            <p>Clique nos mitos abaixo para revelar a verdade:</p>
+
+            <ul class="lista-mitos">
+                <li>
+                   <button onclick="mostrarVerdade(this)">"Maquinas virtuais são muito lentas"</button>
+                   <p class="resposta" style="display:none;">Com hardware moderno e boa configuração,o desempenho pode ser excelente</p>
+                </li>
+
+                  <li>
+                   <button onclick="mostrarVerdade(this)">"Você só pode usar Linux como VM"</button>
+                   <p class="resposta" style="display:none;">É possivel usar diversos sistemas,como Windows, macOS e BSD!</p>
+                 </li>
+
+                  <li>
+                   <button onclick="mostrarVerdade(this)">"VMs são dificeis de configurar"</button>
+                   <p class="resposta" style="display:none;">Softwares como VirtualBox facilitam muito a instalação e uso.</p>
+                   
+                 </li>
+            </ul>
+        </section>
+    
+        <section id="faq">
+               <h2>Perguntas Frequentes</h2>
+
+                <div class="faq-item">
+                    <button class="faq-question">O que é uma maquia virtual ?</button>
+                    <div class="faq-answer">
+                        <p>É um ambiente simulado dentro de um computador fisico, que permite rodar sistemas operacionais de forma isolada</p> 
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">Preciso de muito hardware para usar uma VM? </button>
+                    <div class="faq-answer">
+                        <p>Não necessariamente.Depende do sistema que será virtulizado,mas quanto mais memória e CPU, melhor. </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">Quantos gigas devo colocar na VM?</button>
+                    <div class="faq-answer">
+                        <p>Todas as maquinas vituais tem uma quantidade de giga especifica,é recomendado colocar a quantidade que o software aonde você estiver instalando o sistema operacional permitir,mas não coloque um tamanho muito grande pra não ocupar espaço no sistema operacional principal da sua maquina </p>
+                    </div>
+                </div>
+                
+        </section>
+
+        <section id="interacao">
+            <h2>Teste a interatividade</h2>
+            <p>Clique no botão abaixo para ver uma mensagem:</p>
+            <button onclick="mostrarMensagem()">Clique aqui</button>
+        </section>
+
+         <section id="contato-formulario">
+              <h2>Fale conosco</h2>
+              <p>Preencha o formulario abaixo para em contato:</p>
+
+              <form>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome"required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email"required>
+
+                <label for="mensagem">Mensagem:</label>
+                <textarea name="mensagem" id="mensagem" rows="4"required></textarea>
+
+                <button type="submit">Enviar</button>
+              </form>
+        </section >
+
     </main>
 
     <footer>
         <p>Feito por Dyogo Henrique - 2025</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
