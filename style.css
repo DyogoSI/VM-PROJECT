@@ -288,3 +288,50 @@ text-align: left;
   margin-bottom: 15px;
   font-size: 0.95rem;
 }
+
+#depoimentos{
+  background-color: #ffffff;
+  padding: 30px 20px;
+  margin-top: 40px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+#depoimentos h2{
+  color:#0077b6;
+  margin-bottom:10px;
+}
+
+#depoimentos p{
+   color: #333;
+   margin-bottom: 20px;
+}
+
+.depoimentos-container{
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.depoimento{
+  background-color: #f1f1f1;
+  padding: 20px;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  max-width: 250px;
+  flex: 1 1 250px;
+}
+
+depoimento .comentario{
+  font-style:italic;
+  margin-bottom: 10px;
+}
+
+.depoimento .autor{
+  font-weight: bold;
+  color: #555;
+  font-size: 0.9rem;
+}
+
